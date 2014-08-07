@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+/* CSS Document */
+body{
+	margin:0;
+	padding:0;
+	background-color:#FFF;
+}
+#todayDate{
+	display:inline;
+	font-size:0.75em !important;
+}
+.done-true{
+	text-decoration:line-through;
+	color:red;
+}
+.resource{
+	margin-bottom:20px;
+}
+.red-boxed{
+	background: #EE3E3E;
+	padding:20px;
+	color:#ffffff;
+}
+.grey-boxed{
+	background: #f2f2f2;
+	padding:20px;
+}
+.white-boxed.editable-click, a.editable-click{
+	color:#000000 !important;
+}
+/* element style*/
+#Headline{
+	position:relative;
+	width:100%;
+	height:auto;
+	border-bottom:1px solid white;
+	background-color:#333;
+	-webkit-box-shadow: 0px 0px 4px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 0px 4px rgba(50, 50, 50, 0.75);
+	box-shadow:         0px 0px 4px rgba(50, 50, 50, 0.75);
+}
+#headline-gradient{
+	position:relative;
+	width:100%;
+	height:6px;
+	background: #ff0000; /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  #ff0000 8%, #fc6000 25%, #e5bb00 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(8%,#ff0000), color-stop(25%,#fc6000), color-stop(100%,#e5bb00)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  #ff0000 8%,#fc6000 25%,#e5bb00 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  #ff0000 8%,#fc6000 25%,#e5bb00 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  #ff0000 8%,#fc6000 25%,#e5bb00 100%); /* IE10+ */
+	background: linear-gradient(135deg,  #ff0000 8%,#fc6000 25%,#e5bb00 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0000', endColorstr='#e5bb00',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.container-fluid{
+	-webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow:    0px 0px 4px rgba(0, 0, 0, 0.2);
+	box-shadow:         0px 0px 4px rgba(0, 0, 0, 0.2);
+	padding:10px;
+}
+
+.header{
+	text-align:left;
+	padding-left:20px;
+}
+/* being the body and main content
+----------------------------------------*/
+h1{
+	color:white;
+	font-weight:200;
+	font-size:24px;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding:0;
+	margin:0;
+}
+h2{
+	color:white;;
+	font-weight:200;
+	font-size:24px;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding:0;
+	margin:0;
+}
+h3{
+	font-weight:200;
+	font-size:30px;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding:0;
+	margin:0;
+}
+h4{
+	font-weight:200;
+	font-size:20px;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h5{
+	font-weight:200;
+	font-size:16px;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+

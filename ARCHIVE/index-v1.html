@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html ng-app="app">
+  <head>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular-resource.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+    <script src="js/underscore-min.js"></script>
+    <script src="js/xeditable.min.js"></script>
+	<script src="js/todo.js"></script>
+    <!--STYLES -->
+    <!-- Bootstrap 3 css -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/xeditable.css">
+  </head>
+  <body>
+  
+<div class="container-fluid" id="container" style="background-color:white;">
+  
+  <div class="row-fluid">
+  <div class="span12">
+  	<h2>RedWorks Projects</h2><div ng-controller="DateCtrl" class="ng-scope" id="todayDate">{{getCurrentDate();}}</div>
+    <hr>
+  
+  <div class="row-fluid"><!--Beging TRACKING CELL -->
+  <div class="span12 grey-boxed">
+  
+  <div class="span4">
+  
+  	<h5>Developer Details</h5>
+  	
+    <div ng-controller="DeveloperCtrl">
+      <span editable-text="user.name" e-form="textBtnForm">
+        {{ user.name || 'empty' }}
+      </span>
+      <button class="btn btn-default" ng-click="textBtnForm.$show()" ng-hide="textBtnForm.$visible">
+        edit
+      </button>
+    </div>
+
+  
+  </div>
+  
+  <!-- END THE SPAN THAT HOLDS DEVELOPER DEATAILS AND START PROJECT TO DO LIST -->
+  
+  <div class="span6" ng-controller="TodoCtrl" class="ng-scope">
+    
+    <div>
+    	
+    	<h5>Current Projects: {{getTotalTodos();}}</h5>
+        
+        <ul class="unstyled">
+        	<li ng-repeat="todo in todos">
+            	<input type="checkbox" ng-model="todo.done"/>
+                <span class="done-{{todo.done}}">{{todo.text}}</span>
+            </li>
+        </ul>
+        <form class="form" name="projectForm">
+        	<input type="text" ng-model="formTodoText" required="required" ng-model-instant>
+        	<br><button ng-disabled="!projectForm.$valid" class="btn btn-default" ng-click="addTodo();"><i class="icon-plus"></i>&nbsp;&nbsp;Add Project</button>        	
+        </form>
+        <button  class="btn btn-default" ng-click="clearCompleted();"><i class="icon-trash"></i>&nbsp;&nbsp;Clear Completed Projects</button>
+    </div><!-- end TodoCtrl -->
+    
+    </div><!-- end span8-->
+    </div><!-- end span 12-->
+    </div><!-- end row-fluid ENDS TRACKING CELL-->
+    
+    
+    </div><!-- end span12-->
+    </div><!-- end row-fluid-->
+    
+  </div><!-- end container-fluid -->
+  </body>
+</html>
